@@ -1,3 +1,6 @@
+## How the model works!
+![](https://github.com/Sai-Kumar-Kanuri/Sentiment-Analysis/blob/main/readme/movie-sentiment-functionality.gif)
+
 # Sentiment-Analysis-on-IMDB-Dataset
 Natural Language Processing
 
