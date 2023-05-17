@@ -25,9 +25,6 @@ An end-to-end toolkit on building a movie review sentiment classification LSTM m
 
 As part of model training, we have trained three separate nodels, namely: Simple Neural Net, CNN and LSTM; and concluded with reasoning as to why LSTMs are well suited to handle (sequential) text data.
 
-## How the model works!
-![](https://github.com/Sai-Kumar-Kanuri/Sentiment-Analysis/blob/main/readme/movie-sentiment-functionality.gif)
-
 
 
 
