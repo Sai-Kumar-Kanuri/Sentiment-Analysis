@@ -14,12 +14,14 @@ from keras.models import Sequential, load_model
 from flask import Flask, request, jsonify, render_template
 from keras_preprocessing.sequence import pad_sequences
 import nltk
-from nltk.corpus import stopwords
+# nltk.download("stopwords")
+# nltk.download("punkt")
+# from nltk.corpus import stopwords
 from keras_preprocessing.text import tokenizer_from_json
 import io
 import json
 
-stopwords_list = set(stopwords.words('english'))
+# stopwords_list = set(stopwords.words('english'))
 maxlen = 100
 
 # Load model

@@ -9,7 +9,6 @@ FROM python:${PYTHON_VERSION}-slim as base
 
 # Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1
-
 # Keeps Python from buffering stdout and stderr to avoid situations where
 # the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
@@ -35,14 +34,20 @@ RUN adduser \
 RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
     pip install -r requirements.txt
-RUN python -m nltk.downloader stopwords
 RUN pip install tensorflow==2.9.1
+# RUN python -c "import nltk;nltk.download('stopwords')"
+
+# ENV NLTK_DATA /nltk_data/ ADD . $NLTK_DATA
+
+# RUN python3 -m nltk.downloader punkt -d /usr/share/nltk_data
+# RUN python3 -m nltk.downloader stopwords -d /usr/share/nltk_data
 # Switch to the non-privileged user to run the application.
 USER appuser
 
 # Copy the source code into the container.
 COPY . .
-
+# C:\Users\naras\AppData\Roaming\nltk_data
+# COPY ../nltk_data .
 # Expose the port that the application listens on.
 EXPOSE 8000
 
