@@ -1,7 +1,7 @@
 import re
-import nltk
-from nltk.corpus import stopwords
-stopwords_list = set(stopwords.words('english'))
+# import nltk
+# from nltk.corpus import stopwords
+# stopwords_list = set(stopwords.words('english'))
 
 
 TAG_RE = re.compile(r'<[^>]+>')
@@ -35,7 +35,7 @@ class CustomPreprocess():
         sentence = re.sub(r'\s+', ' ', sentence)  # Next, we remove all the single characters and replace it by a space which creates multiple spaces in our text. Finally, we remove the multiple spaces from our text as well.
         
         # Remove Stopwords
-        pattern = re.compile(r'\b(' + r'|'.join(stopwords_list) + r')\b\s*')
-        sentence = pattern.sub('', sentence)
+        # pattern = re.compile(r'\b(' + r'|'.join(stopwords_list) + r')\b\s*')
+        # sentence = pattern.sub('', sentence)
         
         return sentence

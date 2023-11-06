@@ -1,25 +1,27 @@
 # Library imports
-import pandas as pd
+# import pandas as pd
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
 import re
-from numpy import array
+# from numpy import array
 
-from keras.preprocessing.text import one_hot, Tokenizer
+# from keras.preprocessing.text import one_hot, Tokenizer
 from keras.models import Sequential, load_model
-from keras.layers import LSTM
-from keras.layers.core import Activation, Dropout, Dense
-from keras.layers import Flatten, GlobalMaxPooling1D, Embedding, Conv1D, LSTM
-from sklearn.model_selection import train_test_split
+# from keras.layers import LSTM
+# from keras.layers.core import Activation, Dropout, Dense
+# from keras.layers import Flatten, GlobalMaxPooling1D, Embedding, Conv1D, LSTM
+# from sklearn.model_selection import train_test_split
 from flask import Flask, request, jsonify, render_template
 from keras_preprocessing.sequence import pad_sequences
 import nltk
-from nltk.corpus import stopwords
+# nltk.download("stopwords")
+# nltk.download("punkt")
+# from nltk.corpus import stopwords
 from keras_preprocessing.text import tokenizer_from_json
 import io
 import json
 
-stopwords_list = set(stopwords.words('english'))
+# stopwords_list = set(stopwords.words('english'))
 maxlen = 100
 
 # Load model
